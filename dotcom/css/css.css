@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-image:url("../zdj/tlo4.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+}
+
+header{
+	margin: auto;
+	padding: 0px;
+	background-color: rgba(255, 255, 255, 0.8);
+	border-radius: 10px;
+	text-align: center;
+	margin-top: -9px;
+}
+section{
+	margin: auto;
+	padding: 10px;
+	background-color: rgba(255, 255, 255, 0.8);
+	text-align: center;
+	border-radius: 10px;
+}
+.serwis
+{
+	margin-top: 20px;
+}
+footer{
+	margin-top: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: rgba(255, 255, 255, 0.8);
+	text-align: center;
+	border-radius: 10px;
+}
+a, a:hover, a:focus, a:active {
+	text-decoration: none;
+	color: inherit;
+}
+.mail1{
+	margin: 0;
+	padding-bottom: 10px;
+	font-size: 21px;
+	font-family: 'Didact Gothic', sans-serif;
+}
+.fb1{
+	margin: 0;
+	font-family: 'Didact Gothic', sans-serif;
+}
+.tytul
+{
+	font-size: 30px;
+}
+.tyt{
+	font-size: 30px;
+	font-weight: 700;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.indie{
+	margin: auto;
+	font-size: 30px;
+	font-family: 'Indie Flower', cursive;
+}
+.log{
+	width: 45px;
+	transform: translate(4px,8px);
+}
+p{
+	font-size: 21px;
+	font-family: 'Didact Gothic', sans-serif;
+}
+.copy
+{
+	cursor: pointer;
+}
+.dymek{
+	opacity: 0;
+	transition: opacity .5s ease-in-out;
+	position:absolute;
+	bottom:25px;
+	left:13px;
+	font-size: 15px;
+}
+#przesun
+{
+	bottom: 0px;
+	left:280px;
+}
+.noselect {
+	-webkit-touch-callout: none; /* iOS Safari */
+	  -webkit-user-select: none; /* Safari */
+	   -khtml-user-select: none; /* Konqueror HTML */
+		 -moz-user-select: none; /* Old versions of Firefox */
+		  -ms-user-select: none; /* Internet Explorer/Edge */
+			  user-select: none; /* Non-prefixed version, currently
+									supported by Chrome, Edge, Opera and Firefox */
+  }

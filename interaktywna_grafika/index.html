@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="tytul">Informacje</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="container text-white">
+  <header class="container bg-secondary">
+    <img class="container" src="banner.jpg"/>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <ul class="navbar-nav">
+        <li class="nav-item active" id="navinformacje">
+          <a class="nav-link" href="#">Informacje</a>
+        </li>
+        <li class="nav-item" id="navcennik">
+          <a class="nav-link" href="#">Cennik</a>
+        </li>
+        <li class="nav-item" id="navkontakt">
+          <a class="nav-link" href="#">Kontakt</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="container-fluid bg-secondary"></main>
+  <footer class="container-fluid bg-dark">
+    &copy;2023
+  </footer>
+
+
+  <script>
+    $.ajax({
+      url: 'subsites/navinformacje.html',
+      success: function(data) {
+        $('main').html(data);
+      }
+    });
+
+
+    function removeClasses(){
+      $('#navinformacje').removeClass("active");
+      $('#navcennik').removeClass("active");
+      $('#navkontakt').removeClass("active");
+    }
+
+    
+    $('.navbar-nav > li').click(function() {
+      removeClasses();
+      var id = $(this).attr('id');
+      $('#'+id).addClass("active");
+      $('#tytul').html("Informacje");
+
+      $.ajax({
+        url: 'subsites/'+id+'.html',
+        success: function(data) {
+          $('main').html(data);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
